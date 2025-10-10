@@ -1,0 +1,8 @@
+
+---
+
+### 📄 **4. .gitignore**
+```txt
+__pycache__/
+*.pyc
+*.log
