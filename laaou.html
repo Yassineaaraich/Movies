@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>روابط التواصل الاجتماعي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+        
+        .profile {
+            margin-bottom: 30px;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            margin: 0 auto 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .profile-img i {
+            font-size: 70px;
+            color: #6a11cb;
+        }
+        
+        .profile h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .profile p {
+            font-size: 16px;
+            opacity: 0.9;
+            max-width: 400px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .social-link {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            font-size: 20px;
+        }
+        
+        .social-text {
+            flex-grow: 1;
+            text-align: right;
+            font-weight: 500;
+        }
+        
+        .social-arrow {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .social-link:hover .social-arrow {
+            opacity: 1;
+        }
+        
+        /* ألوان خاصة بكل منصة */
+        .facebook .social-icon { background: #3b5998; }
+        .twitter .social-icon { background: #1da1f2; }
+        .instagram .social-icon { background: #e1306c; }
+        .youtube .social-icon { background: #ff0000; }
+        .linkedin .social-icon { background: #0077b5; }
+        .tiktok .social-icon { background: #000000; }
+        
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+        
+        /* تأثيرات للهاتف */
+        @media (max-width: 480px) {
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .profile-img i {
+                font-size: 50px;
+            }
+            
+            .profile h1 {
+                font-size: 24px;
+            }
+            
+            .social-link {
+                padding: 12px 15px;
+            }
+        }
+        
+        /* تأثيرات الظهور */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile fade-in">
+            <div class="profile-img">
+                <i class="fas fa-user"></i>
+            </div>
+            <h1>موقعي الإلكتروني</h1>
+            <p>تابعنا على منصات التواصل الاجتماعي للبقاء على اطلاع بآخر المستجدات والعروض الخاصة.</p>
+        </div>
+        
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61563890730945 " class="social-link facebook fade-in">
+                <div class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="social-text">فيسبوك</div>
+                <div class="social-arrow">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+            </a>
+            
+            <a href="https://x.com/Blocoins?t=D31vM75OPQcib6fFJ9R4GQ&s=09" class="social-link twitter fade-in">
+                <div class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <div class="social-text">تويتر</div>
+                <div class="social-arrow">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+            </a>
+            
+            <a href="" class="social-link instagram fade-in">
+                <div class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="social-text">إنستغرام</div>
+                <div class="social-arrow">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+            </a>
+            
+            <a href="https://youtube.com/@wisdom_story1?si=zxWn5XMjlTDVUlbS" class="social-link youtube fade-in">
+                <div class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div class="social-text">يوتيوب</div>
+                <div class="social-arrow">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+            </a>
+          
+            
+            <a href="#" class="social-link tiktok fade-in">
+                <div class="social-icon">
+                    <i class="fab fa-tiktok"></i>
+                </div>
+                <div class="social-text">تيك توك</div>
+                <div class="social-arrow">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+            </a>
+        </div>
+        
+        <div class="footer fade-in">
+            <p>جميع الحقوق محفوظة &copy; 2023</p>
+        </div>
+    </div>
+
+    <script>
+        // تأثير الظهور التدريجي للعناصر
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            fadeElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('visible');
+                }, 150 * index);
+            });
+            
+            // تأثير عند التمرير فوق الروابط
+            const socialLinks = document.querySelectorAll('.social-link');
+            
+            socialLinks.forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                });
+                
+                link.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
